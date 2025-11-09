@@ -1,0 +1,243 @@
+
+.contact-container {
+  width: 1920px;
+  height: 1080px;
+  /* width: 100%;
+  min-height: 100vh; */
+  background-size: cover;
+  background-position: center;
+  background-image:url("../assets/background.png");
+  background-size:cover;
+
+
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.contact-form-card {
+  width: 700px;
+  height: 679.4px;
+  position: absolute;
+  top: 200px;
+  left: 1010px;
+  display: flex;
+  flex-direction: column;
+  /* gap: 80px; */
+  background: transparent;
+  border-radius: 10px;
+  opacity: 1;
+}
+.upper-container {
+  width: 700px;
+  height: 104px;
+  gap:12px;
+
+  font-family: "Instrument Sans", sans-serif;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #000000;
+}
+.heading{
+  font-family: "Playfair Display", serif; /* elegant serif font */
+  font-size: 48px; /* similar to Figma's heading size */
+  font-weight: 500;
+
+}
+
+.form-container {
+  width: 700px;
+  height: 375.4px;
+  gap: 20.1px;
+  opacity: 1;
+}
+.contact-info {
+  width: 374px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  opacity: 1;
+
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
+  color: #000;
+}
+
+.description-container {
+  width: 600px;
+  height: 145px;
+  position: absolute;
+  top: 467px;
+  left: 210px;
+  opacity: 1;
+}
+
+.description {
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: left;
+  color: #000000;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20.1px;
+  margin-top: 100px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #fff inset !important;
+  -webkit-text-fill-color: #000 !important;
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  /* border-radius: 6px; */
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  color: #000;
+}
+#username{
+  color:#000;
+}
+
+form textarea {
+  resize: none;
+  height: 100px;
+}
+
+form button {
+  background-color: #e85b2a;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100px;
+  transition: all 0.3s ease; /* merged into main block */
+}
+
+form button:hover {
+  background-color: #ff6a3b;
+  transform: scale(1.05);
+}
+
+
+
+
+.contact-info {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #e85b2a;
+  position: absolute;
+  right: 128px;
+  bottom: 0px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; 
+  padding: 10px 20px;
+  width: fit-content;
+  font-size: 17px;
+  font-weight: bolder;
+  font-family: ui-serif;
+  
+}
+
+
+.seperator {
+  width: 2px;
+  height: 20px;
+  background-color:#e85b2a; /* line color */
+}
+.scrollbar{
+    height:12px;
+    width:200px;
+    position:fixed;
+    top:1050px;
+    left:1045px;
+    background-color:#d0c1;
+    border-radius:6px;
+}
+.navbar{
+    height:103px;
+    width:1920px;
+    padding:20px;
+    position:relative;
+    top:0px;
+    left:0px;
+   display: flex;
+   /* align-items: center; */
+   justify-content: flex-start; /* ensures logo stays left */
+   background: transparent;
+
+   
+}
+.logo{
+  height:69px;
+  width:auto;
+  top:0;
+  left:0;
+}
+
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+@media (max-width: 1024px) {
+  .contact-form-card {
+    width: 80%;
+    left: auto;
+    top: auto;
+  }
+  .description-container {
+    left: auto;
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 20px;
+  }
+  .description {
+    font-size: 18px;
+  }
+  .contact-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+  .contact-info {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+
