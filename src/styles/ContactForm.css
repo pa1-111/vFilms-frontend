@@ -117,6 +117,21 @@ textarea:-webkit-autofill {
   background: #fff;
   color: #000;
 }
+.email-link,
+.phone-link {
+  color: #e85b2a;
+  text-decoration: none;
+  font-weight: bolder;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.email-link:hover,
+.phone-link:hover {
+  color: #ff6a3b;
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
 #username{
   color:#000;
 }
@@ -201,6 +216,50 @@ form button:hover {
   top:0;
   left:0;
 }
+/* ============================
+   Toast Notification Styling
+   ============================ */
+
+/* Success toast (form submitted) */
+.Toastify__toast--success {
+  background: #e85b2a !important; /* Brand orange */
+  color: #fff !important;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 500;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(232, 91, 42, 0.4);
+}
+
+/* Error toast (validation or network errors) */
+.Toastify__toast--error {
+  background: #ff6a3b !important; /* Lighter orange/red */
+  color: #fff !important;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 500;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(255, 106, 59, 0.4);
+}
+
+/* Toast icon color */
+.Toastify__toast-icon svg {
+  fill: #fff !important;
+}
+
+/* Toast progress bar (thin white line) */
+.Toastify__progress-bar {
+  background: #fff !important;
+}
+
+/* Optional: subtle close button */
+.Toastify__close-button {
+  color: #fff !important;
+  opacity: 0.8;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1;
+}
+
 
 
 @media (max-width: 768px) {

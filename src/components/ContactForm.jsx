@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "../styles/ContactForm.css";
 import logo from "../assets/logoedit.png";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function ContactForm() {
   const [username, setUserName] = useState("");
@@ -13,13 +16,13 @@ function ContactForm() {
     e.preventDefault();
 
     if (!username || !email || !usermsg) {
-      alert("Please fill all required fields.");
+      toast.error("Please fill all required fields.");
       return;
     }
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
-      alert("Please enter a valid email address.");
+      toast.error("Please enter a valid email address.");
       return;
     }
 
@@ -37,17 +40,17 @@ function ContactForm() {
       );
 
       if (response.ok) {
-        alert("Form Submitted Successfully!");
+        toast.success("Form Submitted Successfully!");
         setUserName("");
         setEmail("");
         setPhone("");
         setUserMessage("");
       } else {
-        alert("Submission failed. Please try again");
+        toast.error("Submission failed. Please try again");
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("Network error. Please try again");
+      toast.error("Network error. Please try again");
     } finally {
       setLoading(false); // stop loading always
     }
@@ -107,10 +110,21 @@ function ContactForm() {
 
         <div>
           <p className="contact-info">
-            <span>vernita@varnanfilms.co.in</span>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=vernita@varnanfilms.co.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="email-link"
+            >
+              vernita@varnanfilms.co.in
+            </a>
             <span className="seperator"></span>
-            <span>+91 9873684567</span>
+            <a href="tel:+919873684567" className="phone-link">
+              +91 9873684567
+            </a>
           </p>
+
+
         </div>
       </div>
 
@@ -126,6 +140,17 @@ function ContactForm() {
       </div>
 
       <div className="scrollbar"></div>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="colored"
+      />
     </div>
   );
 }
